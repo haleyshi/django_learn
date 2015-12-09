@@ -17,6 +17,8 @@ Including another URLconf
 from django.conf.urls import *
 from django.contrib import admin
 from view import hello
+from dbinsert import dbinsert
+from dbquery import dbquery
 
 #urlpatterns = patterns("",
 #                       ("^hello/$", hello),
@@ -25,4 +27,6 @@ from view import hello
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^hello/', hello),
+    url(r'^dbinsert/', dbinsert),
+    url(r'^dbquery/', dbquery),
 ]
