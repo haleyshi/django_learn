@@ -17,8 +17,10 @@ Including another URLconf
 from django.conf.urls import *
 from django.contrib import admin
 from view import hello
-from dbinsert import dbinsert
-from dbquery import dbquery
+from dbops import dbinsert
+from dbops import dbquery
+from dbops import dbupdate
+from dbops import dbdelete
 
 #urlpatterns = patterns("",
 #                       ("^hello/$", hello),
@@ -29,4 +31,6 @@ urlpatterns = [
     url(r'^hello/', hello),
     url(r'^dbinsert/', dbinsert),
     url(r'^dbquery/', dbquery),
+    url(r'^dbupdate/', dbupdate),
+    url(r'^dbdelete/', dbdelete),
 ]
