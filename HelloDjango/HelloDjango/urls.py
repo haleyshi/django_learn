@@ -21,6 +21,7 @@ from dbops import dbinsert
 from dbops import dbquery
 from dbops import dbupdate
 from dbops import dbdelete
+import search
 
 #urlpatterns = patterns("",
 #                       ("^hello/$", hello),
@@ -33,4 +34,7 @@ urlpatterns = [
     url(r'^dbquery/', dbquery),
     url(r'^dbupdate/', dbupdate),
     url(r'^dbdelete/', dbdelete),
+    url(r'^search-form/', search.search_form),
+    url(r'^search/', search.search),
+    url(r'^search-post/', search.search_post),
 ]
